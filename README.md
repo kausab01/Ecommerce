@@ -51,7 +51,7 @@ Update MySQL username & password in your Java connection file:
 ```java
 String url = "jdbc:mysql://localhost:3306/ecommerce_db";
 String username = "root";
-String password = "your_password";
+String password = "Angel0951";
 ```
 
 ---
