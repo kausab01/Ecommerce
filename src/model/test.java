@@ -1,4 +1,4 @@
-package com.ecommerce.util;
+package model;
 
 public class test {
 
