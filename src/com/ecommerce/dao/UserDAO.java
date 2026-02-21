@@ -1,9 +1,12 @@
-package model;
+package com.ecommerce.dao;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
+
+import com.ecommerce.model.User;
+import com.ecommerce.util.DBConnection;
 
 public class UserDAO {
 
@@ -35,7 +38,7 @@ public class UserDAO {
         try {
             Connection con = DBConnection.getconnection();
 
-            String query = "SELECT * FROM users WHERE email=? AND password=?";
+            String query = "SELECT * FROM user WHERE email=? AND password=?";
 
             PreparedStatement ps = con.prepareStatement(query);
             ps.setString(1, email);

@@ -9,8 +9,8 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import model.User;
-import model.UserDAO;
+import com.ecommerce.dao.UserDAO;
+import com.ecommerce.model.User;
 
 
 @WebServlet("/Registerservlet")

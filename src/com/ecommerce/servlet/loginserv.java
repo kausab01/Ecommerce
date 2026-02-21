@@ -8,8 +8,8 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
-import model.User;
-import model.UserDAO;
+import com.ecommerce.dao.UserDAO;
+import com.ecommerce.model.User;
 
 @WebServlet("/loginserv")
 public class loginserv extends HttpServlet {

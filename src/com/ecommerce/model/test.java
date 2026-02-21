@@ -1,4 +1,6 @@
-package model;
+package com.ecommerce.model;
+
+import com.ecommerce.util.DBConnection;
 
 public class test {
 
