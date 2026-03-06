@@ -2,11 +2,49 @@ package com.ecommerce.dao;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.util.ArrayList;
+import java.util.List;
 
 import com.ecommerce.model.Cart;
 import com.ecommerce.util.DBConnection;
 
 public class CartDAO {
+	public static List<Cart> getCartByUser(String email){
+
+	    List<Cart> list = new ArrayList<>();
+
+	    try{
+
+	        Connection con = DBConnection.getconnection();
+
+	        String query = "SELECT c.*, p.name, p.price FROM cart c JOIN product p ON c.product_id = p.id WHERE c.user_email=?";
+
+	        PreparedStatement ps = con.prepareStatement(query);
+	        ps.setString(1, email);
+
+	        ResultSet rs = ps.executeQuery();
+
+	        while(rs.next()){
+
+	            Cart cart = new Cart(
+	                    rs.getInt("id"),
+	                    rs.getString("user_email"),
+	                    rs.getInt("product_id"),
+	                    rs.getInt("quantity"),
+	                    rs.getString("name"),
+	                    rs.getDouble("price")
+	            );
+
+	            list.add(cart);
+	        }
+
+	    }catch(Exception e){
+	        e.printStackTrace();
+	    }
+
+	    return list;
+	}
 
 	public static boolean addToCart(Cart cart) {
 

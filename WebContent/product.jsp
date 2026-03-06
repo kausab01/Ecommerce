@@ -29,7 +29,7 @@ button {
 
 <body>
 
-<h2>🛍️ Available Products</h2>
+<h2> Available Products</h2>
 
 <% for(Product p : products){ %>
 
@@ -45,6 +45,6 @@ button {
 </div>
 
 <% } %>
-
+<a href="viewCart">View Cart</a>
 </body>
 </html>

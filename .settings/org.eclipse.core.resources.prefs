@@ -1,3 +1,5 @@
 eclipse.preferences.version=1
+encoding//WebContent/cart.jsp=UTF-8
 encoding//WebContent/home.jsp=UTF-8
 encoding//WebContent/product.jsp=UTF-8
+encoding//src/com/ecommerce/dao/CartDAO.java=UTF-8
